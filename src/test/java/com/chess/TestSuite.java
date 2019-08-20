@@ -10,10 +10,12 @@ import com.chess.pieces.PiecesMoveManagerTest;
 import com.chess.pieces.handler.BishopMoveHandlerTest;
 import com.chess.pieces.handler.HorseMoveHandlerTest;
 import com.chess.pieces.handler.PawnMoveHandlerTest;
+import com.chess.pieces.handler.QueenMoveHandlerTest;
 import com.chess.pieces.handler.RookMoveHandlerTest;
 
 @RunWith(Suite.class)
-@SuiteClasses({ ChessBoardTest.class,PawnMoveHandlerTest.class,RookMoveHandlerTest.class,BishopMoveHandlerTest.class,HorseMoveHandlerTest.class, PiecesMoveManagerTest.class,PieceTest.class })
+@SuiteClasses({ ChessBoardTest.class, PawnMoveHandlerTest.class, RookMoveHandlerTest.class, BishopMoveHandlerTest.class,
+		HorseMoveHandlerTest.class, QueenMoveHandlerTest.class, PiecesMoveManagerTest.class, PieceTest.class })
 public class TestSuite {
 
 }
