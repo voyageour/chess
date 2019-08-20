@@ -55,5 +55,28 @@ public class PieceTest {
 		
 		Assert.assertEquals(actual, p.move());		
 	}
+	
+	@Test
+	public void testBishopMoves() throws Exception {
+		IChessBoard board = new ChessBoard(8, 8);
+		Piece p = new Piece("Bishop", "D5", board);
+		String actual = "C6,B7,A8,E6,F7,G8,E4,F3,G2,H1,C4,B3,A2";
+				
+		Assert.assertEquals(actual, p.move());		
+	}
+	
+	@Test
+	public void testBishopMovesAtBoundary() throws Exception {
+		IChessBoard board = new ChessBoard(8, 8);
+		Piece p = new Piece("Bishop", "A8", board);
+		
+		String actual = "B7,C6,D5,E4,F3,G2,H1";		
+		Assert.assertEquals(actual, p.move());	
+		
+		p = new Piece("Bishop", "H8", board);
+		
+		actual="G7,F6,E5,D4,C3,B2,A1";
+		Assert.assertEquals(actual, p.move());			
+	}
 
 }
