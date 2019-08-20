@@ -3,6 +3,8 @@ package com.chess.pieces.handler;
 import com.chess.board.IChessBoard;
 
 public class PawnMoveHandler implements IMoveHandler {
+	
+	private final String EMPTY_STR = "";
 
 	@Override
 	public String possibleMoves(String srcPosition,IChessBoard board) {
@@ -17,7 +19,7 @@ public class PawnMoveHandler implements IMoveHandler {
 				output.append(r).append(c).append(",");
 			}
 		}
-		return output.substring(0, output.length() - 1);
+		return (output.length() == 0) ? EMPTY_STR : output.substring(0, output.length() - 1);
 	}
 
 }
