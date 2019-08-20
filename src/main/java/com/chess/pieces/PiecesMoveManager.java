@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.chess.pieces.handler.BishopMoveHandler;
+import com.chess.pieces.handler.HorseMoveHandler;
 import com.chess.pieces.handler.IMoveHandler;
 import com.chess.pieces.handler.PawnMoveHandler;
 import com.chess.pieces.handler.RookMoveHandler;
@@ -20,6 +21,7 @@ public class PiecesMoveManager {
 		handlers.put(PawnMoveHandler.NAME, new PawnMoveHandler());
 		handlers.put(RookMoveHandler.NAME, new RookMoveHandler());
 		handlers.put(BishopMoveHandler.NAME, new BishopMoveHandler());
+		handlers.put(HorseMoveHandler.NAME, new HorseMoveHandler());
 	}
 
 	static IMoveHandler get(String pieceName) {
