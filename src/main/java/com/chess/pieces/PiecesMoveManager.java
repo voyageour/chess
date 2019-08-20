@@ -5,6 +5,7 @@ import java.util.Map;
 
 import com.chess.pieces.handler.IMoveHandler;
 import com.chess.pieces.handler.PawnMoveHandler;
+import com.chess.pieces.handler.RookMoveHandler;
 
 public class PiecesMoveManager {
 
@@ -15,7 +16,8 @@ public class PiecesMoveManager {
 	}
 
 	private static void init() {
-		handlers.put("PAWN", new PawnMoveHandler());
+		handlers.put(PawnMoveHandler.NAME, new PawnMoveHandler());
+		handlers.put(RookMoveHandler.NAME, new RookMoveHandler());
 	}
 
 	static IMoveHandler get(String pieceName) {

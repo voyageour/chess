@@ -1,11 +1,10 @@
 package com.chess.pieces;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 import com.chess.pieces.handler.IMoveHandler;
 import com.chess.pieces.handler.PawnMoveHandler;
-
-import org.junit.Assert;
 
 public class PiecesMoveManagerTest {
 
