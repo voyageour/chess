@@ -9,10 +9,18 @@ public class Piece {
 	private String name;
 	private IChessBoard board;
 
-	public Piece(String name,String position,IChessBoard board) {
-		this.name = name;
-		this.position = position;
+	public Piece(String name,String position,IChessBoard board) throws Exception {
 		this.board = board;
+		this.name = name;
+		this.position = position;		
+		validate();
+	}
+	
+	private void validate() throws Exception {
+		char[] positions = position.toCharArray();
+		if(!board.evaluatePosition(positions[0], positions[1])) {
+			throw new Exception(String.format(" '%s' is not a valid position", position));
+		}
 	}
 
 	public String getPosition() {
